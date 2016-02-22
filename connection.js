@@ -12,9 +12,12 @@ var db  =new MongoDB (dbname,new Server(local,dbPort,{auto_reconnect:true}),{W:1
 db.open(function(error,d){
 
 	if(error){
-		console.log(error+"");
+
 	}else {
+		var a;
+//		console.log(error? "ssss":"sassa");
 			console.log("lien ket thanh cong "+dbname);
+//			console.log(a ==1? "hell":"hooo");
 	}
 });
 ///

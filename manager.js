@@ -13,7 +13,7 @@ var user =Mongodb.user;
 module.exports.login=function(req,callback){
 	// console.log(req);
 	user.find({
-		"userid":req.userid,
+		"username":req.username,
 		"password":req.password
 }).toArray(function(err,res){
 	if(err){
@@ -25,21 +25,20 @@ module.exports.login=function(req,callback){
 	}
 });
 };
+// module.exports.CreateNewUser=function(req,callback){
+// 	user.insert({
+// 		"username":req.username,
+// 		"password":req.password
+// 	},function(err,res){
+// 		if(err){
+// 			callback("that bai",null);
+// 		}else  {
+// 			console.log("thanh cong");
+// 			callback(null,res);
+// 		});
+// 	};
+// 	// // get userby userid
 // thuc hien inser mot user moi
-module.exports.CreateNewUser=function(req,callback){
-user.insert({
-	"userid":req.userid,
-	"password":req.password
-},function(err,res){
-	if(err){
-			callback("that bai",null);
-	}else  {
-		console.log("thanh cong");
-				callback(null,res);
-	}
-});
-};
-// // get userby userid
 //  module.exports.getUserByUserId=function(reg,callback){
 //
 // 	 	user.find({"userid",req.userid}).toArray(function(err,res){

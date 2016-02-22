@@ -27,35 +27,34 @@ app.post('/login',function(req,res){
     }else {
       var jsonResult = createJsonResult(0,null,resDocument);
       	res.json(jsonResult,200);
-
     }
 
   		});
 
 });
 
-// thuc hien insert
-app.post('/createnewuser',function(req,res){
-    // if(err){
-    //     res.json("data":err,200);
-    // }else {
-    //   	res.json(resDocument,200);
-    // }
-    Manager.CreateNewUser(req.body,function(err,resdocument){
-      var resurl ;
-      if(err){
-        res.json(resurl,200);
-        resurl=createJsonResult(1,err,null);
-          //res.json({"data":err},200);
-
-      }else {
-resurl=createJsonResult(0,null,resdocument);
-        res.json(resurl,200);
-          // res.json({"data":"thanh cong="},200);
-      }
-    });
-
-});
+// // thuc hien insert
+// app.post('/createnewuser',function(req,res){
+//     // if(err){
+//     //     res.json("data":err,200);
+//     // }else {
+//     //   	res.json(resDocument,200);
+//     // }
+//     Manager.CreateNewUser(req.body,function(err,resdocument){
+//       var resurl ;
+//       if(err){
+//         res.json(resurl,200);
+//         resurl=createJsonResult(1,err,null);
+//           //res.json({"data":err},200);
+//
+//       }else {
+// resurl=createJsonResult(0,null,resdocument);
+//         res.json(resurl,200);
+//           // res.json({"data":"thanh cong="},200);
+//       }
+//     });
+//
+// });
 
 
 // app.post("/getUserByUserId",funtion(req,res){
@@ -63,6 +62,7 @@ resurl=createJsonResult(0,null,resdocument);
 //           if(err){
 //             // req.json(
 //           }
+
 //       });
 //
 // });
